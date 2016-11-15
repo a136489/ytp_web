@@ -3,7 +3,7 @@ import tornado.ioloop
 import tornado.web
 import tornado.options
 
-tornado.options.define("port", default=8888, help="jizz")
+tornado.options.define("port", default=80, help="jizz")
 
 class IndexHandler(tornado.web.RequestHandler):
 	def get(self):
