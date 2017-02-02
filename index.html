@@ -2,21 +2,31 @@
 	<head>
 		<meta charset="utf-8">
 		<title>ytppppppppppppppp</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	</head>
 	<body>
 		
 		<form method="post">
-			<input type="textarea" name="text" placeholder="Type something!">
+			<input type="text" name="text1" placeholder="Type something!">
+			<input type="text" name="text2" placeholder="Type something!">
+			<input type="text" name="text3" placeholder="Type something!">
 			<input type="submit">
 		</form>
+
 		{% if message %}
 			{{message}}
-			<br/>
-			<audio controls>
-				<source src="static/audio/trump.wav" type="audio/wav">
-				Your browser does not support the audio element.QQ
-			</audio>
-		{% end if %}		
+		{% end if %}
+
+		<button class="startBtn">start!</button>
+		<button class="endBtn">end!</button>
+
+		<h1>This is what you said:</h1>
+		<div>
+			<p id="show"></p>
+		</div>
+
+		<script src="static/js/speechRecognition.js">
+		</script>
 
 	</body>
 </html>
