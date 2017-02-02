@@ -6,21 +6,45 @@
 	</head>
 	<body>
 		
+		<h1>Word Vector</h1>
+		<p>Attention! Please type words from <span style="color: red">CORPORA LIST</span></p>
 		<form method="post">
-			<input type="text" name="text1" placeholder="Type something!">
-			<input type="text" name="text2" placeholder="Type something!">
-			<input type="text" name="text3" placeholder="Type something!">
-			<input type="submit">
+			<input type="text" name="text1" placeholder="Input 1">
+			is to
+			<input type="text" name="text2" placeholder="Output 1">
+			<h2>AS</h2>
+			<input type="text" name="text3" placeholder="Input 2">
+			is to
+			<input type="submit" value="???">
 		</form>
 
+		<h1 style="color: red">
 		{% if message %}
 			{{message}}
 		{% end if %}
+		</h1>
 
+		<div>
+			<h3>Corpora List</h3>
+			<ul>
+				{% if corpora %}
+					{% for word in corpora %}
+						<li>{{ escape(word) }}</li>
+					{% end %}
+				{% end if %}
+			</ul>
+		</div>
+
+		<hr><hr><hr>
+
+		<h1>Speech Recognition</h1>
+		<p>click START to speak! (English)</p>
+
+		<br>
 		<button class="startBtn">start!</button>
 		<button class="endBtn">end!</button>
 
-		<h1>This is what you said:</h1>
+		<h3>This is what you said:</h3>
 		<div>
 			<p id="show"></p>
 		</div>

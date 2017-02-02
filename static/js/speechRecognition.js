@@ -83,5 +83,4 @@ if (!('webkitSpeechRecognition' in window)) {
 		recognition.stop();
 		recognizing = false;
 	});
-
 }
