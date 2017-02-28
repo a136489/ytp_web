@@ -2006,6 +2006,10 @@
 		transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
 	}
 
+	.startBtn {
+		background: #9acd32;
+	}
+
 		input[type="button"]:hover,
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
@@ -2013,6 +2017,11 @@
 		.button:hover {
 			color: #fff;
 			background: #ef8376;
+		}
+
+		.startBtn:hover {
+			color: #fff;
+			background: #dbdb70
 		}
 
 		input[type="button"].alt,
@@ -2096,7 +2105,7 @@
 
 	#header {
 		position: relative;
-		background-image: url("../../static/img/hea.jpg");
+		background-image: url("../img/header.jpg");
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -2463,7 +2472,7 @@
 				position: absolute;
 				top: 50%;
 				margin: -1.5em 0 0 0;
-				background: url("static/img/arrow.svg") no-repeat center center;
+				background: url("images/arrow.svg") no-repeat center center;
 			}
 
 			.carousel .forward:hover:before, .carousel .backward:hover:before {
