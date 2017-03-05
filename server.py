@@ -34,13 +34,6 @@ class IndexHandler(tornado.web.RequestHandler):
 		self.render("index.html", message = '')
 
 	def post(self):
-		output = ''
-		error  = ''
-
-		t1 = self.get_argument('text1', '')
-		t2 = self.get_argument('text2', '')
-		t3 = self.get_argument('text3', '')
-
 		if(t1 in word_list and t2 in word_list and t3 in word_list):
 			output = similarity_query(t1, t2, t3)
 			print(output)
@@ -48,6 +41,23 @@ class IndexHandler(tornado.web.RequestHandler):
 		else:
 			error = "please choose words from CORPORA LIST"
 			self.render("index.html", message = error)
+
+class Gryffindor(tornado.web.RequestHandler):
+	def get(self):
+		self.render("gryffindor.html")
+
+class Hufflepuff(tornado.web.RequestHandler):
+	def get(self):
+		self.render("hufflepuff.html")
+
+class Ravenclaw(tornado.web.RequestHandler):
+	def get(self):
+		self.render("ravenclaw.html")
+
+class Slytherin(tornado.web.RequestHandler):
+	def get(self):
+		self.render("slytherin.html")
+
 
 
 
@@ -62,6 +72,10 @@ def main():
 	app = tornado.web.Application(
 		[
 			(r'/', IndexHandler),
+			(r'/gryffindor', Gryffindor), 
+			(r'/hufflepuff', Hufflepuff),
+			(r'/ravenclaw', Ravenclaw),
+			(r'/slytherin', Slytherin),
 		], **settings
 	)
 

@@ -1,3 +1,4 @@
+$(document).ready(function () {
 var final_transcript = '';
 var recognizing = false;
 var now_input;
@@ -9,6 +10,8 @@ if (!('webkitSpeechRecognition' in window)) {
 	var recognition = new webkitSpeechRecognition();
 
 	console.log(start_timestamp+"j");
+
+	$("#startMsg").hide();
 
 	recognition.continuous     = true;
 	recognition.interimResults = true;
@@ -86,12 +89,14 @@ if (!('webkitSpeechRecognition' in window)) {
 
 	$(".startBtn").click(function () {
 		console.log("st")
+		$("#startMsg").show();
 		final_transcript = '';
 		recognition.start();
 	});
 
 	$(".endBtn").click(function () {
 		console.log("end")
+		$("#startMsg").hide();
 		recognition.stop();
 		recognizing = false;
 	});
@@ -102,3 +107,4 @@ if (!('webkitSpeechRecognition' in window)) {
 		$("#show").text("");
 	});
 }
+});

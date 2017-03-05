@@ -2105,7 +2105,7 @@
 
 	#header {
 		position: relative;
-		background-image: url("../img/header.jpg");
+		background-image: url("../img/greathall.jpg");
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -2140,7 +2140,7 @@
 			}
 
 		#header h1 {
-			color: #fff;
+			color: white;
 			font-size: 3em;
 			line-height: 1em;
 		}
@@ -2335,13 +2335,15 @@
 /* Banner */
 
 	#banner {
-		background: #fff;
+		background-image: url("../img/bb.jpg");
+		color: white;
 		text-align: center;
-		padding: 4.5em 0 4.5em 0;
+		padding: 10em 0 11em 0;
 		margin-bottom: 0;
 	}
 
-		#banner header > p {
+		#banner header > p, h2 {
+			padding: 0 0 0 500px;
 			margin-bottom: 0;
 		}
 
@@ -2432,6 +2434,7 @@
 /* Carousel */
 
 	.carousel {
+		background-image: url("../img/wall.jpg");
 		position: relative;
 		overflow: hidden;
 		padding: 2em 0 2em 0;
@@ -2517,12 +2520,13 @@
 		.carousel article {
 			display: inline-block;
 			width: 18em;
-			background: #fff;
+			color: white;
+			/*background: #fff;*/
 			text-align: center;
 			padding: 0 1em 3em 1em;
 			margin: 0 2em 0 0;
 			white-space: normal;
-			opacity: 1.0;
+			opacity: 1;
 			-moz-transition: opacity 0.75s ease-in-out;
 			-webkit-transition: opacity 0.75s ease-in-out;
 			-ms-transition: opacity 0.75s ease-in-out;
@@ -2540,6 +2544,10 @@
 				width: auto;
 				margin-right: -2em;
 				margin-bottom: 3em;
+			}
+
+			.carousel article h3 {
+				color: #fff;
 			}
 
 			.carousel article p {
@@ -2568,7 +2576,7 @@
 				}
 
 				.carousel article {
-					width: 18em;
+					width: 15.5em;
 					margin: 0 1.25em 0 0;
 				}
 
