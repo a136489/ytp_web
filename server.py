@@ -58,6 +58,16 @@ class Slytherin(tornado.web.RequestHandler):
 	def get(self):
 		self.render("slytherin.html")
 
+class Test(tornado.web.RequestHandler):
+	def get(self):
+		tt = ''
+		self.render("test.html", ttt = tt)
+
+	def post(self):
+		# tt = self.get_argument('ttt')
+		tt = self.get_argument('jiz')
+		self.render('test.html', ttt = tt)
+
 
 
 
@@ -76,6 +86,7 @@ def main():
 			(r'/hufflepuff', Hufflepuff),
 			(r'/ravenclaw', Ravenclaw),
 			(r'/slytherin', Slytherin),
+			(r'/tt', Test),
 		], **settings
 	)
 

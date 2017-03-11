@@ -106,5 +106,10 @@ if (!('webkitSpeechRecognition' in window)) {
 		final_transcript = '';
 		$("#show").text("");
 	});
+
+	$(".ana").click(function() {
+		text = $('#show').text();
+		$('#show').text(text + "jizz")
+	});
 }
 });
