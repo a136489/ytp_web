@@ -3,23 +3,30 @@ import tornado.ioloop
 import tornado.web
 import tornado.options
 
-#import word2vec
+import text2house
 
-## tornado ##
-tornado.options.define("port", default=80, help="jizz")
+tornado.options.define("port", default=8887, help="jizz")
 
 class IndexHandler(tornado.web.RequestHandler):
 	def get(self):
-		self.render("index.html")
+		self.render("index.html", error = "")
 
 	def post(self):
 		self_intro = self.get_argument('self-intro')
-		
-		tested = True
-		result = "gryffindor"
-		page = result + ".html"
+		print(text2house.text2house(self_intro), "jizzzz")
 
-		self.render(page, tested = tested)
+		result = text2house.text2house(self_intro)
+		if (result != 'e' and result != 'jerr'):
+			tested = True
+			page = result + ".html"
+			self.render(page, tested = tested)
+		else:
+			print(result, "jizzjjjizjz")
+			errors = {
+				'e': '"Please say something."',
+				'jerr': '"I cannot figure out which house you belong in, maybe you should say more things about you."'
+			}
+			self.render('index.html', error = errors[result])
 
 
 

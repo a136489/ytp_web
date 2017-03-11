@@ -88,6 +88,8 @@ if (!('webkitSpeechRecognition' in window)) {
 	})
 
 	$(".startBtn").click(function () {
+		$('endBtn').css("visibility", "hidden")
+
 		console.log("st")
 		$("#startMsg").show();
 		final_transcript = '';
@@ -106,22 +108,6 @@ if (!('webkitSpeechRecognition' in window)) {
 		final_transcript = '';
 		$("#show").text("");
 	});
-
-	$(".ana").click(function(event) {
-		event.preventDefault();
-		if ( $("#show").text() ){
-			console.log("jizz");
-		} else {
-			
-		}
-	});
-
-	if( !$("#show").text() ){
-		console.log("jizz")
-		$(".ana").prop("disabled", true);
-	} else {
-		$(".ana").prop("disabled", false);
-	}
 
 }
 });
