@@ -39,9 +39,6 @@
 										<li><a href="/slytherin">Slytherin</a></li>
 									</ul>
 								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
 							</ul>
 						</nav>
 
@@ -54,11 +51,14 @@
 						<article id="main" class="special">
 							<header>
 								<h2><a href="#">Slytherin</a></h2>
-								<p>
+								{% if tested %}
+									<h2 style="color: red">You may belong to...</h2>
+								{% end %}
+								<p><i>
 									"Or perhaps in Slytherin,<br>
 									You'll make your real friends,<br>
 									Those cunning folk use any means,<br>
-									To achieve their ends."<br>
+									To achieve their ends."</i><br>
 									—The Sorting Hat
 								</p>
 							</header>
@@ -70,8 +70,8 @@
 								<header>
 									<h3>Traits</h3>
 								</header>
-								<p>
-									"You could be great, you know, and Slytherin will help you on the way to greatness, no doubt about that."<br>
+								<p><i>
+									"You could be great, you know, and Slytherin will help you on the way to greatness, no doubt about that."</i><br>
 									—The Sorting Hat to Harry Potter
 								</p>
 								<p>
@@ -86,8 +86,8 @@
 								<header>
 									<h3>Reputation</h3>
 								</header>
-								<p>
-									"There's not a single witch or wizard who went bad who wasn't in Slytherin."<br>
+								<p><i>
+									"There's not a single witch or wizard who went bad who wasn't in Slytherin."</i><br>
 									—Wizarding prejudice against Slytherin House
 								</p>
 								<p>
@@ -114,8 +114,8 @@
 								<header>
 									<h3>Slytherin's founder, Salazar Slytherin</h3>
 								</header>
-								<p>
-									"We'll teach just those whose ancestry's purest."<br>
+								<p><i>
+									"We'll teach just those whose ancestry's purest."</i><br>
 									—Professor Slytherin's opinion on the running of Hogwarts
 								</p>
 								<p>
@@ -137,8 +137,8 @@
 									<h3>House ghost, The Bloody Baron</h3>
 								</header>
 								<p>
-									Seamus Finnigan: "How did he get covered in blood?"<br>
-									Nicholas de Mimsy-Porpington: "I've never asked."<br>
+									<i>Seamus Finnigan: "How did he get covered in blood?"<br>
+									Nicholas de Mimsy-Porpington: "I've never asked."</i><br>
 									— Seamus asking Sir Nicholas about Bloody Baron
 								</p>
 							</article>

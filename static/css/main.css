@@ -1886,10 +1886,12 @@
 		-webkit-appearance: none;
 		display: block;
 		border: 0;
-		background: #fafafa;
+		background-color: transparent;
 		width: 100%;
-		border-radius: 0.5em;
-		border: solid 1px #E5E5E5;
+		text-align: center;
+		vertical-align; 
+		resize: none;
+		border-style: none;
 		padding: 1em;
 		-moz-transition: background-color 0.35s ease-in-out, border-color 0.35s ease-in-out;
 		-webkit-transition: background-color 0.35s ease-in-out, border-color 0.35s ease-in-out;
@@ -1905,6 +1907,12 @@
 			background: #fff;
 			border-color: #df7366;
 		}
+
+	form textarea:focus {
+		background: transparent;
+		border-style: none;
+	}
+
 
 	form input[type="text"],
 	form input[type="email"],
@@ -2343,7 +2351,8 @@
 	}
 
 		#banner header > p, h2 {
-			padding: 0 0 0 500px;
+			padding: 0 0 0 50px;
+//			text-align: center;
 			margin-bottom: 0;
 		}
 

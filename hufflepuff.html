@@ -39,9 +39,6 @@
 										<li><a href="/slytherin">Slytherin</a></li>
 									</ul>
 								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
 							</ul>
 						</nav>
 
@@ -53,14 +50,17 @@
 					<div class="container">
 						<article id="main" class="special">
 							<header>
+								{% if tested %}
+									<h2 style="color: red">You may belong to...</h2>
+								{% end %}
 								<h2><a href="#">Hufflepuff</a></h2>
-								<p>
+								<p><i>
 									"You might belong in Hufflepuff,<br>
 									Where they are just and loyal,<br>
 									Those patient Hufflepuffs are true,<br>
 									And unafraid of toil"<br>
 									—The Sorting Hat
-								</p>
+								</i></p>
 							</header>
 							<a href="#" class="image featured"><img src="static/img/Hufflepuff.jpg" alt="" /></a>
 							<p>
@@ -81,9 +81,9 @@
 								<header>
 									<h3>Reputation</h3>
 								</header>
-								<p>
+								<p><i>
 									"Everyone says Hufflepuff are a lot o' duffers,"
-									<br>—Wizarding opinion of the House
+									</i><br>—Wizarding opinion of the House
 								</p>
 								<p>
 									According to Minerva McGonagall, all four of the houses have produced exceptional witches and wizards in their time, but due to Helga Hufflepuff's policy of accepting any student and its usually poor performance in the House Cup, Hufflepuff is often thought to be the house of less talented wizards and witches. However, this is merely a misunderstanding of the Sorting Hat's poem. The Hufflepuff house has produced a great many of successful and influential members of the wizarding world, such as the renowned Magizoologist Newton Scamander. A great number of exceptionally skilled witches and wizards also have their origins on this house, including noted Arithmancer Bridget Wenlock, and former Minister for Magic Artemisia Lufkin.
@@ -100,8 +100,8 @@
 								<header>
 									<h3>Hufflepuff's founder, Helga Hufflepuff</h3>
 								</header>
-								<p>
-									"I'll teach the lot and treat them just the same."<br>
+								<p><i>
+									"I'll teach the lot and treat them just the same."</i><br>
 									—Professor Hufflepuff's view, unlike that of the other founders
 								</p>
 								<p>
@@ -122,8 +122,8 @@
 								<header>
 									<h3><a href="#">House ghost, The Fat Friar</a></h3>
 								</header>
-								<p>
-									"Forgive and forget, I say, we ought to give Peeves a second chance —"<br>
+								<p><i>
+									"Forgive and forget, I say, we ought to give Peeves a second chance —"</i><br>
 									—The Fat Friar's characteristic forgiveness
 								</p>
 							</article>

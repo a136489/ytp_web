@@ -107,9 +107,21 @@ if (!('webkitSpeechRecognition' in window)) {
 		$("#show").text("");
 	});
 
-	$(".ana").click(function() {
-		text = $('#show').text();
-		$('#show').text(text + "jizz")
+	$(".ana").click(function(event) {
+		event.preventDefault();
+		if ( $("#show").text() ){
+			console.log("jizz");
+		} else {
+			
+		}
 	});
+
+	if( !$("#show").text() ){
+		console.log("jizz")
+		$(".ana").prop("disabled", true);
+	} else {
+		$(".ana").prop("disabled", false);
+	}
+
 }
 });

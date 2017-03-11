@@ -3,72 +3,45 @@ import tornado.ioloop
 import tornado.web
 import tornado.options
 
-# import word2vec
+#import word2vec
 
-## gensim ##
-# import os
-# import re
-# import gensim, logging
-
-# model = gensim.models.Word2Vec.load('HP')
-# word_list = model.wv.index2word
-
-# def modeling():
-# 	l = []
-# 	for word in word_list:
-# 		l.append((word, model[word]))
-# 	print(l)
-# 	return l
-
-# def similarity_query(in1, in2, out1):
-# 	out2 = model.most_similar(positive=[out1, in2], negative=[in1], topn=1)[0][0]
-# 	return out2
-## gensim end ##
-
-## tornado
-tornado.options.define("port", default=8887, help="jizz")
+## tornado ##
+tornado.options.define("port", default=80, help="jizz")
 
 class IndexHandler(tornado.web.RequestHandler):
 	def get(self):
-		# l = modeling()
-		self.render("index.html", message = '')
+		self.render("index.html")
 
 	def post(self):
-		if(t1 in word_list and t2 in word_list and t3 in word_list):
-			output = similarity_query(t1, t2, t3)
-			print(output)
-			self.render("index.html", message = output)
-		else:
-			error = "please choose words from CORPORA LIST"
-			self.render("index.html", message = error)
+		self_intro = self.get_argument('self-intro')
+		
+		tested = True
+		result = "gryffindor"
+		page = result + ".html"
+
+		self.render(page, tested = tested)
+
+
 
 class Gryffindor(tornado.web.RequestHandler):
 	def get(self):
-		self.render("gryffindor.html")
+		tested = False
+		self.render("gryffindor.html", tested = tested)
 
 class Hufflepuff(tornado.web.RequestHandler):
 	def get(self):
-		self.render("hufflepuff.html")
+		tested = False
+		self.render("hufflepuff.html", tested = tested)
 
 class Ravenclaw(tornado.web.RequestHandler):
 	def get(self):
-		self.render("ravenclaw.html")
+		tested = False
+		self.render("ravenclaw.html", tested = tested)
 
 class Slytherin(tornado.web.RequestHandler):
 	def get(self):
-		self.render("slytherin.html")
-
-class Test(tornado.web.RequestHandler):
-	def get(self):
-		tt = ''
-		self.render("test.html", ttt = tt)
-
-	def post(self):
-		# tt = self.get_argument('ttt')
-		tt = self.get_argument('jiz')
-		self.render('test.html', ttt = tt)
-
-
+		tested = False 
+		self.render("slytherin.html", tested = tested)
 
 
 settings = {
@@ -86,7 +59,6 @@ def main():
 			(r'/hufflepuff', Hufflepuff),
 			(r'/ravenclaw', Ravenclaw),
 			(r'/slytherin', Slytherin),
-			(r'/tt', Test),
 		], **settings
 	)
 

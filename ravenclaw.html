@@ -39,9 +39,6 @@
 										<li><a href="/slytherin">Slytherin</a></li>
 									</ul>
 								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
 							</ul>
 						</nav>
 
@@ -53,12 +50,15 @@
 					<div class="container">
 						<article id="main" class="special">
 							<header>
+								{% if tested %}
+									<h2 style="color: red">You may belong to...</h2>
+								{% end %}
 								<h2><a href="#">Ravenclaw</a></h2>
-								<p>
+								<p><i>
 									"Or yet in wise old Ravenclaw,<br>
 									If you've a ready mind,<br>
 									Where those of wit and learning,<br>
-									Will always find their kind."<br>
+									Will always find their kind."</i><br>
 									—The Sorting Hat
 								</p>
 							</header>
@@ -81,8 +81,8 @@
 								<header>
 									<h3>Reputation</h3>
 								</header>
-								<p>
-									"I got into big trouble during my third year for duelling a Ravenclaw prefect who insisted that Bridget Wenlock had come from his house, not mine."<br>
+								<p><i>
+									"I got into big trouble during my third year for duelling a Ravenclaw prefect who insisted that Bridget Wenlock had come from his house, not mine."</i><br>
 									—A Hufflepuff with an intelligent witch in their house
 								</p>
 								<p>
@@ -100,8 +100,8 @@
 								<header>
 									<h3>Rowena Ravenclaw, founder of Ravenclaw</h3>
 								</header>
-								<p>
-									"Wit beyond measure is man's greatest treasure."<br>
+								<p><i>
+									"Wit beyond measure is man's greatest treasure."</i><br>
 									—A quote attributed to Ravenclaw and etched in her diadem
 								</p>
 								<p>
@@ -122,8 +122,8 @@
 								<header>
 									<h3>House ghost, The Grey Lady</h3>
 								</header>
-								<p>
-									"I stole the diadem. I sought to make myself cleverer, more important than my mother. I ran away with it. My mother, they say, never admitted that the diadem was gone, but pretended that she had it still. She concealed her loss, my dreadful betrayal, even from the other founders of Hogwarts."<br>
+								<p><i>
+									"I stole the diadem. I sought to make myself cleverer, more important than my mother. I ran away with it. My mother, they say, never admitted that the diadem was gone, but pretended that she had it still. She concealed her loss, my dreadful betrayal, even from the other founders of Hogwarts."</i><br>
 									—Helena confiding in Harry Potter
 								</p>
 							</article>

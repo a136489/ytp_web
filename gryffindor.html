@@ -39,9 +39,6 @@
 										<li><a href="/slytherin">Slytherin</a></li>
 									</ul>
 								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
 							</ul>
 						</nav>
 
@@ -53,14 +50,17 @@
 					<div class="container">
 						<article id="main" class="special">
 							<header>
+								{% if tested %}
+									<h2 style="color: red">You may belong to...</h2>
+								{% end %}
 								<h2><a href="#">Gryffindor</a></h2>
-								<p>
+								<p><i>
 									"You might belong in Gryffindor,<br>
 									Where dwell the brave at heart,<br>
 									Their daring, nerve, and chivalry<br>
 									Set Gryffindors apart"<br>
 									—The Sorting Hat
-								</p>
+								</i></p>
 							</header>
 							<a href="#" class="image featured"><img src="static/img/Gryffindor.jpg" alt="" /></a>
 							<p>
@@ -81,8 +81,8 @@
 								<header>
 									<h3>Reputation</h3>
 								</header>
-								<p>
-									"The House of Godric Gryffindor has commanded the respect of the wizarding world for nearly ten centuries."<br>
+								<p><i>
+									"The House of Godric Gryffindor has commanded the respect of the wizarding world for nearly ten centuries."</i><br>
 									—Minerva McGonagall on Gryffindor's reputation
 								</p>
 								<p>
@@ -103,8 +103,8 @@
 								<header>
 									<h3>Gryffindor's founder, Godric Gryffindor</h3>
 								</header>
-								<p>
-									"We'll teach all those with brave deeds to their name."<br>
+								<p><i>
+									"We'll teach all those with brave deeds to their name."<br></i>
 									—Professor Gryffindor's preference of students
 								</p>
 								<p>
@@ -125,8 +125,8 @@
 								<header>
 									<h3>House ghost, Nearly Headless Nick</h3>
 								</header>
-								<p>
-									"I haven't eaten for nearly five hundred years. I don't need to, of course, but one does miss it. I don't think I've introduced myself? Sir Nicholas de Mimsy-Porpington at your service. Resident ghost of Gryffindor Tower."<br>
+								<p><i>
+									"I haven't eaten for nearly five hundred years. I don't need to, of course, but one does miss it. I don't think I've introduced myself? Sir Nicholas de Mimsy-Porpington at your service. Resident ghost of Gryffindor Tower."</i><br>
 									—Sir Nicholas greets Gryffindor first-years in 1991
 								</p>
 							</article>
